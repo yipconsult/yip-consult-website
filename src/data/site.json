@@ -142,7 +142,7 @@
     },
     "email": "hello@yipconsult.com",
     "formspree": {
-      "action": "https://formspree.io/f/your-form-id",
+      "action": "https://formspree.io/f/xykqkpwl",
       "fields": {
         "name": "稱呼",
         "email": "電郵",
