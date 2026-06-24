@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import site from '../../data/site.json';
+
+const project = site.projects.items.find(p => p.slug === 'kidwealth-ai');
+---
+
+<BaseLayout title={project.name} description={project.description}>
+  <Header />
+  <main class="pt-24 md:pt-32">
+    <div class="section-container">
+      <!-- Back link -->
+      <a href="/#projects" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-10 text-sm">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to all projects
+      </a>
+
+      <div class="max-w-3xl">
+        <!-- Status + Icon -->
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-4xl">{project.icon}</span>
+          <span class="flex items-center gap-1.5 text-sm text-green-400 bg-green-400/10 px-3 py-1.5 rounded-full">
+            <span class="w-1.5 h-1.5 bg-green-400 rounded-full" />
+            Live
+          </span>
+        </div>
+
+        <h1 class="section-heading text-4xl md:text-5xl mb-6">{project.name}</h1>
+        <p class="text-lg text-gray-400 leading-relaxed mb-8">{project.description}</p>
+
+        <!-- Tech stack -->
+        <div class="flex flex-wrap gap-2 mb-12">
+          {project.tech.map(t => (
+            <span class="text-sm text-gray-400 bg-white/[0.04] px-3 py-1.5 rounded-full border border-white/[0.06]">
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <!-- CTA -->
+        <a href={project.url} target="_blank" rel="noopener noreferrer" class="btn-primary !px-10 !py-4 text-base">
+          Visit KidWealth AI
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

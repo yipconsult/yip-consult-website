@@ -1,0 +1,163 @@
+{
+  "site": {
+    "name": "YipConsult",
+    "tagline": "AI 自動化，從此不再是大企業專利",
+    "description": "YipConsult is a Hong Kong-based full-stack development team specializing in AI automation for SMEs. We build websites, AI agents, and automation tools that help small businesses work smarter.",
+    "url": "https://yipconsult.com",
+    "ogImage": "/og-image.svg",
+    "locale": "zh-HK"
+  },
+  "nav": [
+    { "label": "Services", "href": "#services", "zhLabel": "服務" },
+    { "label": "Projects", "href": "#projects", "zhLabel": "項目" },
+    { "label": "About", "href": "#about", "zhLabel": "關於我地" },
+    { "label": "Contact", "href": "#contact", "zhLabel": "聯絡" }
+  ],
+  "hero": {
+    "headline": "AI 自動化，從此不再是大企業專利",
+    "subheadline": "We're a Hong Kong full-stack team that builds websites, AI agents, and automation tools — designed specifically for SMEs with limited resources and big ambitions.",
+    "cta": {
+      "primary": { "label": "即刻 WhatsApp 我地", "href": "https://wa.me/85294727891?text=%E4%BD%A0%E5%A5%BD%20YipConsult%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E4%BD%A0%E5%9C%B0%E5%9A%9F%20AI%20%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E3%80%82" },
+      "secondary": { "label": "View Our Work", "href": "#projects" }
+    }
+  },
+  "services": {
+    "heading": "What We Build",
+    "subheading": "務實落地、結果導向 — practical solutions, measurable results.",
+    "items": [
+      {
+        "icon": "🌐",
+        "title": "Web & App Development",
+        "zhTitle": "網站及應用程式開發",
+        "description": "Custom websites and web applications built with modern frameworks. Fast, responsive, and designed to convert visitors into customers — from corporate landing pages to full-scale SaaS platforms.",
+        "tech": "Next.js / Astro / React",
+        "benefits": [
+          "Conversion-focused landing pages",
+          "Progressive web apps (PWA)",
+          "Multi-language support for HK market",
+          "Admin dashboards & CMS integration"
+        ]
+      },
+      {
+        "icon": "🤖",
+        "title": "AI Agent Development",
+        "zhTitle": "AI 智能代理開發",
+        "description": "Custom AI agents and automation workflows that handle repetitive tasks — customer inquiries, lead qualification, data entry, content generation — so your team can focus on growth.",
+        "tech": "OpenAI / Grok API / LangChain",
+        "benefits": [
+          "24/7 intelligent chatbots (WhatsApp, web, Messenger)",
+          "Automated quotation & invoicing",
+          "AI content generation for social media",
+          "OCR data extraction & auto-entry"
+        ]
+      },
+      {
+        "icon": "🌍",
+        "title": "Translation & Localization",
+        "zhTitle": "翻譯及本地化服務",
+        "description": "Professional translation and localization services bridging English, Cantonese, and Mandarin. We don't just translate words — we adapt content to resonate with your target audience.",
+        "tech": "AI-assisted + Human review",
+        "benefits": [
+          "Business documents & marketing copy",
+          "Website & app localization (EN ↔ 中文)",
+          "Technical documentation",
+          "Cantonese-specific content adaptation"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Our Projects",
+    "subheading": "由小做起、逐步擴展 — start small, scale fast. Here's what we're building.",
+    "items": [
+      {
+        "name": "KidWealth AI",
+        "slug": "kidwealth-ai",
+        "description": "AI-powered financial literacy learning platform for kids. Interactive stories and games that teach money management through engaging AI conversations.",
+        "status": "live",
+        "url": "https://kidwealthai.carrd.co",
+        "tech": ["Next.js", "OpenAI API", "TailwindCSS"],
+        "icon": "🧒"
+      },
+      {
+        "name": "HK Driving Exam App",
+        "slug": "driving-exam",
+        "description": "A comprehensive practice app for Hong Kong driving license examinations. Includes mock tests, road sign quizzes, and AI-powered mistake analysis.",
+        "status": "building",
+        "tech": ["React Native", "Supabase", "OpenAI API"],
+        "icon": "🚗"
+      },
+      {
+        "name": "CantoQuest",
+        "slug": "canto-learning",
+        "description": "An interactive Cantonese learning app designed for Mandarin speakers relocating to Hong Kong. Focuses on practical daily conversations with AI-powered pronunciation feedback.",
+        "status": "building",
+        "tech": ["Next.js", "Whisper API", "Supabase"],
+        "icon": "🗣️"
+      },
+      {
+        "name": "ReelForge",
+        "slug": "reel-forging",
+        "description": "AI-powered reel generation SaaS for Hong Kong property agencies. Automatically transforms property listings into engaging short-form video content for social media marketing.",
+        "status": "building",
+        "tech": ["Next.js", "FFmpeg", "OpenAI API"],
+        "icon": "🏠"
+      }
+    ]
+  },
+  "about": {
+    "heading": "About Us",
+    "english": "We're a full-stack development team based in Hong Kong, focused on bringing AI automation to SMEs. We believe automation isn't just for big corporations — it's a practical tool every small business can deploy today to save time, cut costs, and unlock growth.",
+    "cantonese": {
+      "intro": "我地係專注中小企 AI 自動化轉型嘅 Full-Stack Web Development Team。",
+      "mission": "我地深信 AI 自動化唔再係大企業嘅專利，而係每間資源有限、人手精簡嘅中小企都可以即時用到嘅效率工具。我嘅使命係幫你將日常瑣碎工序交畀機器，把寶貴時間留畀真正嘅業務增長同創新。",
+      "style": {
+        "heading": "我地既工作風格：",
+        "points": [
+          "務實落地、結果導向：唔好堆砌高大上技術，只選最合適、最穩定、最快見效嘅方案，確保每一個項目都帶來可量度嘅成本節省同效率提升。",
+          "由小做起、逐步擴展：明白中小企最怕大工程，所以永遠從單一痛點入手，快速產生價值，再慢慢擴展成全方位自動化。",
+          "以人為本（Human-in-the-loop）：AI 負責處理 80% 重複性、標準化工作，而複雜判斷、情感溝通同策略決策，永遠由人類團隊把關，讓員工潛力真正被釋放。",
+          "透明協作、易上手：全程用最簡單易明嘅方式解釋技術，讓非技術背景嘅老闆同團隊都可以輕鬆掌握同管理。"
+        ]
+      },
+      "process": {
+        "heading": "如何處理每一個 AI 自動化項目：",
+        "steps": [
+          "找出痛點：同你深入檢視公司日常運作，一起鎖定最耗時、最枯燥嘅工序（例如客戶查詢、報價、數據錄入、社群管理）。",
+          "由小做起：優先推出簡單但強大嘅解決方案，例如 24/7 智能聊天機械人（WhatsApp / Messenger / 網站整合）、報價單與發票自動化、OCR 數據自動錄入、或 AI 社群內容生成工具，讓你即時感受到效益。",
+          "全面整合 + 持續優化：逐步連接不同平台同工具，建立完整 AI 工作流（包括個人化電郵行銷、庫存智能預測、市場分析），同時提供培訓同 handover，確保系統長期穩定運行。",
+          "增值轉化：除咗幫你自動化現有流程，我仲會協助你將呢啲解決方案包裝成可銷售產品或模板，例如兒童教育 AI 互動學習工具、Reels 自動生成 SaaS 等，幫你開拓全新 side income 來源。"
+        ]
+      },
+      "tech": "我地團隊擅長用 Next.js、OpenAI / Grok API、Supabase、WhatsApp Business API等現代技術，快速開發低成本、高性價比嘅 AI 解決方案。無論係智能客服、行政流程自動化，定係行銷內容放大，我地都以「釋放員工潛力、提升業務競爭力」為最終目標。",
+      "cta": "準備好讓你嘅業務進入「自動駕駛」模式，一起以更精簡成本發揮更大成果嗎？歡迎聯絡我地，一齊度身打造專屬你公司嘅 AI 自動化方案！"
+    }
+  },
+  "contact": {
+    "heading": "Let's Talk",
+    "subheading": "準備好讓你嘅業務進入「自動駕駛」模式？",
+    "whatsapp": {
+      "label": "WhatsApp 我地",
+      "href": "https://wa.me/85294727891?text=%E4%BD%A0%E5%A5%BD%20YipConsult%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E4%BD%A0%E5%9C%B0%E5%9A%9F%20AI%20%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E3%80%82"
+    },
+    "email": "hello@yipconsult.com",
+    "formspree": {
+      "action": "https://formspree.io/f/your-form-id",
+      "fields": {
+        "name": "稱呼",
+        "email": "電郵",
+        "company": "公司名稱",
+        "message": "簡單講下你想做啲乜？"
+      },
+      "submit": "Send Enquiry"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 YipConsult. All rights reserved.",
+    "tagline": "Full-stack AI automation for Hong Kong SMEs.",
+    "links": [
+      { "label": "WhatsApp", "href": "https://wa.me/85294727891" },
+      { "label": "Email", "href": "mailto:hello@yipconsult.com" }
+    ]
+  }
+}

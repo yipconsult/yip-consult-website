@@ -1,0 +1,41 @@
+---
+import site from '../data/site.json';
+import '@fontsource/figtree/400.css';
+import '@fontsource/figtree/500.css';
+import '@fontsource/figtree/700.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '../styles/globals.css';
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${site.site.name}` : `${site.site.name} — ${site.site.tagline}`;
+---
+
+<!doctype html>
+<html lang="zh-HK">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description || site.site.description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description || site.site.description} />
+    <meta property="og:image" content={site.site.ogImage} />
+    <meta property="og:url" content={site.site.url} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description || site.site.description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-black text-white font-body antialiased">
+    <slot />
+  </body>
+</html>

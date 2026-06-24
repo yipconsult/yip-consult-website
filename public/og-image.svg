@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="orb" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#1a3e72" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <!-- Navy orb -->
+  <rect width="1200" height="630" fill="url(#orb)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+  </g>
+
+  <!-- Logo mark -->
+  <rect x="80" y="80" width="64" height="64" rx="16" fill="#1a3e72"/>
+  <text x="112" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="28" fill="#ffffff">YC</text>
+
+  <!-- Company name -->
+  <text x="164" y="124" font-family="system-ui, sans-serif" font-weight="700" font-size="36" fill="#ffffff" letter-spacing="-0.04em">YipConsult</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="180" x2="360" y2="180" stroke="#1a3e72" stroke-width="3" stroke-opacity="0.5"/>
+
+  <!-- Main headline -->
+  <text x="80" y="280" font-family="system-ui, sans-serif" font-weight="700" font-size="56" fill="#ffffff" letter-spacing="-0.04em">AI 自動化，</text>
+  <text x="80" y="350" font-family="system-ui, sans-serif" font-weight="700" font-size="56" fill="#ffffff" letter-spacing="-0.04em">從此不再是大企業專利</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="410" font-family="system-ui, sans-serif" font-weight="400" font-size="22" fill="#a0a0a0">Full-stack AI automation for Hong Kong SMEs</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="#1a3e72" fill-opacity="0.3"/>
+  <text x="80" y="612" font-family="system-ui, sans-serif" font-weight="500" font-size="16" fill="#a0a0a0">yipconsult.com  ·  WhatsApp +852 9472 7891</text>
+  <text x="1120" y="612" font-family="system-ui, sans-serif" font-weight="500" font-size="16" fill="#a0a0a0" text-anchor="end">YipConsult</text>
+</svg>

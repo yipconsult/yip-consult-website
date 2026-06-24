@@ -1,0 +1,86 @@
+@import '@fontsource/figtree/400.css';
+@import '@fontsource/figtree/500.css';
+@import '@fontsource/figtree/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #000000;
+    --color-text: #ffffff;
+    --color-muted: #a0a0a0;
+    --color-navy: #1a3e72;
+    --color-navy-light: #2559a0;
+    --color-navy-dark: #122b50;
+    --color-surface: #0d0d0d;
+    --color-surface-light: #1a1a1a;
+    --color-border: rgba(255, 255, 255, 0.08);
+
+    --font-heading: 'Figtree', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium
+           bg-navy hover:bg-navy-light text-white
+           transition-all duration-300 ease-out
+           hover:shadow-lg hover:shadow-navy/25;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium
+           border border-white/20 text-white
+           hover:bg-white/5 hover:border-white/40
+           transition-all duration-300 ease-out;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl border border-white/[0.06]
+           p-6 md:p-8
+           transition-all duration-300 ease-out
+           hover:border-navy/30 hover:bg-surface-light;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-snug leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-lg md:text-xl text-gray-400 max-w-2xl;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent;
+  }
+}

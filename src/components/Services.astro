@@ -1,0 +1,53 @@
+---
+import site from '../data/site.json';
+const { heading, subheading, items } = site.services;
+---
+
+<section id="services" class="section-container">
+  <!-- Section header -->
+  <div class="mb-16">
+    <span class="text-navy-light text-sm font-medium tracking-widest uppercase mb-4 block">Services</span>
+    <h2 class="section-heading mb-4">{heading}</h2>
+    <p class="section-subheading">{subheading}</p>
+  </div>
+
+  <!-- Service cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {items.map(service => (
+      <div class="card group flex flex-col">
+        <!-- Icon -->
+        <div class="text-4xl mb-5">{service.icon}</div>
+
+        <!-- Title -->
+        <h3 class="text-xl font-heading font-bold mb-1 tracking-snug leading-tight">
+          {service.title}
+        </h3>
+        <p class="text-sm text-navy-light mb-4">{service.zhTitle}</p>
+
+        <!-- Description -->
+        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+          {service.description}
+        </p>
+
+        <!-- Tech stack badge -->
+        <div class="mb-5">
+          <span class="text-xs text-gray-500 bg-white/[0.04] px-3 py-1.5 rounded-full border border-white/[0.06]">
+            {service.tech}
+          </span>
+        </div>
+
+        <!-- Benefits list -->
+        <ul class="space-y-2">
+          {service.benefits.map(b => (
+            <li class="flex items-start gap-2 text-sm text-gray-400">
+              <svg class="w-4 h-4 mt-0.5 text-navy-light flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              {b}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
