@@ -1,5 +1,6 @@
 ---
 import site from '../data/site.json';
+import Analytics from '@vercel/analytics/astro';
 import '@fontsource/figtree/400.css';
 import '@fontsource/figtree/500.css';
 import '@fontsource/figtree/700.css';
@@ -37,5 +38,6 @@ const pageTitle = title ? `${title} | ${site.site.name}` : `${site.site.name} â€
   </head>
   <body class="bg-black text-white font-body antialiased">
     <slot />
+    <Analytics />
   </body>
 </html>
