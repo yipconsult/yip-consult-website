@@ -72,11 +72,11 @@
     "items": [
       {
         "name": "KidWealth AI",
-        "slug": "kidwealth-ai",
-        "description": "AI-powered financial literacy learning platform for kids. Interactive stories and games that teach money management through engaging AI conversations.",
+        "slug": "kidwealthai",
+        "description": "Bilingual financial literacy for Hong Kong kids aged 6–14. Interactive money lessons, life skills, and entrepreneurship stories via WhatsApp/Telegram.",
         "status": "live",
-        "url": "https://kidwealthai.carrd.co",
-        "tech": ["Next.js", "OpenAI API", "TailwindCSS"],
+        "url": "/kidwealthai",
+        "tech": ["Next.js", "OpenAI API", "WhatsApp API"],
         "icon": "🧒"
       },
       {

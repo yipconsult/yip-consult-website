@@ -16,8 +16,8 @@ const { heading, subheading, items } = site.projects;
     {items.map(project => (
       <a
         href={project.status === 'live' ? project.url : `/projects/${project.slug}`}
-        target={project.status === 'live' ? '_blank' : '_self'}
-        rel={project.status === 'live' ? 'noopener noreferrer' : ''}
+        target={project.url && project.url.startsWith('http') ? '_blank' : '_self'}
+        rel={project.url && project.url.startsWith('http') ? 'noopener noreferrer' : ''}
         class="card group flex flex-col"
       >
         <div class="flex items-start justify-between mb-4">
@@ -60,7 +60,7 @@ const { heading, subheading, items } = site.projects;
 
         <!-- Arrow indicator -->
         <div class="mt-4 text-gray-600 group-hover:text-navy-light transition-colors duration-300 flex items-center gap-1 text-sm">
-          {project.status === 'live' ? 'Visit site' : 'Learn more'}
+          {project.status === 'live' ? (project.url && project.url.startsWith('http') ? 'Visit site' : 'View project') : 'Learn more'}
           <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
