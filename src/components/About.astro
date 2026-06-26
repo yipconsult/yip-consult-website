@@ -5,54 +5,88 @@ const { heading, english, cantonese } = site.about;
 
 <section id="about" class="section-container">
   <!-- Section header -->
-  <div class="mb-16">
+  <div class="mb-20">
     <span class="text-navy-light text-sm font-medium tracking-widest uppercase mb-4 block">About Us</span>
     <h2 class="section-heading mb-4">{heading}</h2>
-    <p class="section-subheading text-gray-400">{english}</p>
   </div>
 
-  <!-- Content grid -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-
-    <!-- LEFT: Work Style -->
-    <div>
-      <div class="card mb-6">
-        <p class="text-gray-300 leading-relaxed mb-4">{cantonese.intro}</p>
-        <p class="text-gray-400 leading-relaxed">{cantonese.mission}</p>
-      </div>
-
-      <h3 class="text-xl font-heading font-bold mb-5 tracking-snug">{cantonese.style.heading}</h3>
-      <ul class="space-y-4">
-        {cantonese.style.points.map(point => (
-          <li class="flex items-start gap-3 text-sm text-gray-400 leading-relaxed">
-            <span class="w-6 h-6 rounded-full bg-navy/20 text-navy-light flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">
-              ✓
-            </span>
-            {point}
-          </li>
-        ))}
-      </ul>
+  <!-- Mission — centered, prominent -->
+  <div class="max-w-3xl mx-auto mb-24">
+    <div class="text-center">
+      <p class="text-xl md:text-2xl text-gray-300 leading-relaxed mb-4 font-heading tracking-snug">
+        {cantonese.intro}
+      </p>
+      <p class="text-lg text-gray-400 leading-relaxed">
+        {english}
+      </p>
     </div>
+  </div>
 
-    <!-- RIGHT: Process + Tech -->
-    <div>
-      <h3 class="text-xl font-heading font-bold mb-5 tracking-snug">{cantonese.process.heading}</h3>
-      <ol class="space-y-5 mb-10">
-        {cantonese.process.steps.map((step, i) => (
-          <li class="flex items-start gap-4">
-            <span class="w-8 h-8 rounded-lg bg-navy text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+  <!-- Work Principles — 2x2 grid of compact cards -->
+  <div class="mb-24">
+    <h3 class="text-xl font-heading font-bold mb-10 text-center tracking-snug">
+      {cantonese.style.heading}
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+      {cantonese.style.points.map((point, i) => {
+        const [title, ...descParts] = point.split('：');
+        const desc = descParts.join('：');
+        const icons = ['🎯', '📈', '🤝', '💡'];
+        return (
+          <div class="card flex items-start gap-4 group">
+            <div class="text-2xl flex-shrink-0 mt-0.5">{icons[i]}</div>
+            <div>
+              <h4 class="text-white font-heading font-bold text-sm mb-1 tracking-snug">{title}</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">{desc}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+
+  <!-- Process — horizontal timeline -->
+  <div class="mb-24">
+    <h3 class="text-xl font-heading font-bold mb-12 text-center tracking-snug">
+      {cantonese.process.heading}
+    </h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      {cantonese.process.steps.map((step, i) => {
+        const [stepTitle, ...stepDescParts] = step.split('：');
+        const stepDesc = stepDescParts.join('：');
+        return (
+          <div class="relative text-center">
+            <!-- Step number -->
+            <div class="w-12 h-12 rounded-xl bg-navy text-white flex items-center justify-center
+                        text-lg font-bold font-heading mx-auto mb-4">
               {i + 1}
-            </span>
-            <p class="text-sm text-gray-400 leading-relaxed pt-1">{step}</p>
-          </li>
-        ))}
-      </ol>
-
-      <div class="card">
-        <p class="text-sm text-gray-400 leading-relaxed mb-4">{cantonese.tech}</p>
-        <p class="text-sm text-white font-medium leading-relaxed">{cantonese.cta}</p>
-      </div>
+            </div>
+            <!-- Connector line (desktop) -->
+            {i < 3 && (
+              <div class="hidden lg:block absolute top-6 left-[calc(50%+1.5rem)] w-[calc(100%-3rem)] h-px bg-navy/30" />
+            )}
+            <h4 class="text-white font-heading font-bold text-sm mb-2">{stepTitle}</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">{stepDesc}</p>
+          </div>
+        );
+      })}
     </div>
+  </div>
 
+  <!-- Bottom: Tech + CTA -->
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="card">
+      <p class="text-sm text-gray-400 leading-relaxed mb-4">{cantonese.tech}</p>
+      <div class="w-12 h-px bg-navy/40 mx-auto mb-4" />
+      <p class="text-white font-medium leading-relaxed">{cantonese.cta}</p>
+    </div>
+    <a href="#contact" class="btn-primary mt-8 !px-10 !py-4 text-base">
+      聯絡我地
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
   </div>
 </section>
