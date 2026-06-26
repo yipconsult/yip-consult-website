@@ -140,7 +140,7 @@
       "label": "WhatsApp 我地",
       "href": "https://wa.me/85294727891?text=%E4%BD%A0%E5%A5%BD%20YipConsult%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E4%BD%A0%E5%9C%B0%E5%9A%9F%20AI%20%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E3%80%82"
     },
-    "email": "hello@yipconsult.com",
+    "email": "cs@yipconsult.com",
     "formspree": {
       "action": "https://formspree.io/f/xykqkpwl",
       "fields": {
@@ -157,7 +157,7 @@
     "tagline": "Full-stack AI automation for Hong Kong SMEs.",
     "links": [
       { "label": "WhatsApp", "href": "https://wa.me/85294727891" },
-      { "label": "Email", "href": "mailto:hello@yipconsult.com" }
+      { "label": "Email", "href": "mailto:cs@yipconsult.com" }
     ]
   }
 }
