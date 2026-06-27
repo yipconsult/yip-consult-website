@@ -11,6 +11,7 @@
     { "label": "Services", "href": "#services", "zhLabel": "服務" },
     { "label": "Projects", "href": "#projects", "zhLabel": "項目" },
     { "label": "About", "href": "#about", "zhLabel": "關於我地" },
+    { "label": "Blog", "href": "/blog", "zhLabel": "文章" },
     { "label": "Contact", "href": "#contact", "zhLabel": "聯絡" }
   ],
   "hero": {
